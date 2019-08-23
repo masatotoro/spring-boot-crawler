@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/spring-boot-crawler
     docker:
-      - image: circleci/openjdk:8-jdk-browsers
+      - image: circleci/openjdk:8-jdk
     steps:
       - checkout
       - restore_cache:
