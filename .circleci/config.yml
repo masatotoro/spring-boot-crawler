@@ -13,4 +13,10 @@ jobs:
           paths:
             - ~/.m2
           key: spring-boot-crawler-{{ checksum "pom.xml" }}
-      - run: mvn package
+      # - mvn package
+      - run: mvn --batch-mode release:prepare release:perform
+  deploy-job:
+    steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "f4:5e:62:4b:94:09:0d:7c:42:2c:f5:9f:f1:ce:a5:e7"
