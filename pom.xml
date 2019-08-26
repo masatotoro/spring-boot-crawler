@@ -16,6 +16,13 @@
 	<name>spring-boot-crawler</name>
 	<description>spring-boot-crawler</description>
 
+	<scm>
+		<url>https://github.com/masatotoro/spring-boot-crawler</url>
+		<connection>scm:git:git@github.com:masatotoro/spring-boot-crawler.git</connection>
+		<developerConnection>scm:git:git@github.com:masatotoro/spring-boot-crawler.git</developerConnection>
+		<tag>HEAD</tag>
+	</scm>
+	
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -63,6 +70,28 @@
 				<configuration>
 					<useSystemClassLoader>false</useSystemClassLoader>
 				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<tagNameFormat>v@{project.version}</tagNameFormat>
+					<scmCommentPrefix>[skip ci] [maven-release-plugin]</scmCommentPrefix>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-api</artifactId>
+						<version>1.10.0</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.10.0</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
