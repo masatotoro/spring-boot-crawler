@@ -15,7 +15,7 @@ jobs:
           key: spring-boot-crawler-{{ checksum "pom.xml" }}
       - add_ssh_keys:
           fingerprints:
-            - "f4:5e:62:4b:94:09:0d:7c:42:2c:f5:9f:f1:ce:a5:e7"
+            - "cd:3d:f8:a3:66:96:4f:af:41:b6:51:33:13:f5:67:0d"
       # - run: mvn package
       - run: cp .circleci/settings.xml $HOME/.m2/settings.xml
       - run: git config --global user.name "circle-ci"
