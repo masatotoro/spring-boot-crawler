@@ -20,6 +20,6 @@ jobs:
       - run: cp .circleci/settings.xml $HOME/.m2/settings.xml
       - run: git config --global user.name "circle-ci"
       - run: git config --global user.email "circle@circle-ci.org"
-      - run: mvn --batch-mode release:prepare release:perform
+      - run: mvn -X --batch-mode release:prepare release:perform
       # - run: mvn site
 
