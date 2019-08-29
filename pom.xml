@@ -23,6 +23,7 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+				<github.global.server>github</github.global.server>
 	</properties>
 
 	<dependencies>
@@ -76,7 +77,7 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-<!-- 					<scmCommentPrefix>[skip ci] [maven-release-plugin]</scmCommentPrefix> -->
+					<scmCommentPrefix>[skip ci] [maven-release-plugin]</scmCommentPrefix>
 				</configuration>
 				<dependencies>
 					<dependency>

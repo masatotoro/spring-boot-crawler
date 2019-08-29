@@ -17,6 +17,7 @@ jobs:
           fingerprints:
             - "f4:5e:62:4b:94:09:0d:7c:42:2c:f5:9f:f1:ce:a5:e7"
       # - run: mvn package
+      - run: cp .circleci/settings.xml $HOME/.m2/settings.xml
       - run: git config --global user.name "circle-ci"
       - run: git config --global user.email "circle@circle-ci.org"
       - run: mvn --batch-mode release:prepare release:perform
