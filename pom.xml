@@ -20,7 +20,7 @@
 		<developerConnection>scm:git:git@github.com:masatotoro/spring-boot-crawler.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
-	
+
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -76,7 +76,7 @@
 				<configuration>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
 					<tagNameFormat>v@{project.version}</tagNameFormat>
-					<scmCommentPrefix>[skip ci] [maven-release-plugin]</scmCommentPrefix>
+<!-- 					<scmCommentPrefix>[skip ci] [maven-release-plugin]</scmCommentPrefix> -->
 				</configuration>
 				<dependencies>
 					<dependency>
