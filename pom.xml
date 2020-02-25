@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>jp.gihyo.wdpress.advance</groupId>
 	<artifactId>spring-boot-crawler</artifactId>
-	<version>0.0.10</version>
+	<version>0.0.11-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>spring-boot-crawler</name>
 	<description>spring-boot-crawler</description>
@@ -18,7 +18,7 @@
 		<url>https://github.com/masatotoro/spring-boot-crawler</url>
 		<connection>scm:git:git@github.com:masatotoro/spring-boot-crawler.git</connection>
 		<developerConnection>scm:git:git@github.com:masatotoro/spring-boot-crawler.git</developerConnection>
-		<tag>v0.0.10</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<properties>
@@ -50,12 +50,12 @@
 			<dependency>
 				<groupId>jp.gihyo.wbpress.advance.lib.activemq</groupId>
 				<artifactId>spring-boot-lib-activemq</artifactId>
-				<version>0.0.10</version>
+				<version>0.0.11-SNAPSHOT</version>
 			</dependency>
 			<dependency>
 				<groupId>jp.gihyo.wbpress.advance.lib.mongo</groupId>
 				<artifactId>spring-boot-lib-mongo</artifactId>
-				<version>0.0.10</version>
+				<version>0.0.11-SNAPSHOT</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
