@@ -7,12 +7,12 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: spring-boot-crawler-{{ checksum "pom.xml" }}
+          key: spring-boot-{{ checksum "pom.xml" }}
       - run: mvn dependency:go-offline
       - save_cache:
           paths:
             - ~/.m2
-          key: spring-boot-crawler-{{ checksum "pom.xml" }}
+          key: spring-boot-{{ checksum "pom.xml" }}
       - add_ssh_keys:
           fingerprints:
             - "cd:3d:f8:a3:66:96:4f:af:41:b6:51:33:13:f5:67:0d"
