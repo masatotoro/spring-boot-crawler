@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>jp.gihyo.wdpress.advance</groupId>
 		<artifactId>spring-boot-crawler</artifactId>
-		<version>0.0.9-SNAPSHOT</version>
+		<version>0.0.10-SNAPSHOT</version>
 	</parent>
 
 	<groupId>jp.gihyo.wbpress.advance.crawler.crawling</groupId>
@@ -18,13 +18,28 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<!-- <version>4.5.11</version> -->
+		</dependency>
+
+		<dependency>
 			<groupId>jp.gihyo.wbpress.advance.lib.activemq</groupId>
 			<artifactId>spring-boot-lib-activemq</artifactId>
 		</dependency>
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.cloud</groupId> -->
-		<!-- <artifactId>spring-cloud-starter-openfeign</artifactId> -->
-		<!-- </dependency> -->
+		<dependency>
+			<groupId>jp.gihyo.wbpress.advance.lib.mongo</groupId>
+			<artifactId>spring-boot-lib-mongo</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

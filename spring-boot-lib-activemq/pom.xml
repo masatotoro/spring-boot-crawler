@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>jp.gihyo.wdpress.advance</groupId>
 		<artifactId>spring-boot-crawler</artifactId>
-		<version>0.0.9-SNAPSHOT</version>
+		<version>0.0.10-SNAPSHOT</version>
 	</parent>
 
 	<groupId>jp.gihyo.wbpress.advance.lib.activemq</groupId>

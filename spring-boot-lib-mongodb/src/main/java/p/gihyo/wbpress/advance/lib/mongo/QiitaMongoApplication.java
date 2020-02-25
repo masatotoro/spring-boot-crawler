@@ -1,4 +1,4 @@
-package jp.gihyo.wbpress.qiita.mongo;
+package p.gihyo.wbpress.advance.lib.mongo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
