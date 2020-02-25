@@ -8,6 +8,7 @@ jobs:
       - checkout
       - restore_cache:
           key: spring-boot-{{ checksum "pom.xml" }}
+      - run: mvn clean install
       - run: mvn dependency:go-offline
       - save_cache:
           paths:
