@@ -1,36 +1,33 @@
 package jp.gihyo.wbpress.advance.crawler.crawling.config;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.http.HttpHost;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
+import org.apache.http.impl.client.HttpClients;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import feign.Client;
+import feign.httpclient.ApacheHttpClient;
 
 @Configuration
 public class FeignClientConfig {
 
-  //    @Bean
-  //    public QiitaClient qiitaClient(CloseableHttpClient httpclient) {
-  //      return Feign //
-  //          .builder()
-  //          .client(new AbstractHttpClient(httpclient))
-  //          .target(QiitaClient.class, "https://qiita.com/api/v2/");
-  //    }
+  @Bean
+  public Client feignClient(CloseableHttpClient httpClient) {
+    return new ApacheHttpClient(httpClient);
+  }
 
-  //  @Bean
-  //  RestTemplate restTemplate() {
-  //    SimpleClientHttpRequestFactory factory = new SimpleClientHttpRequestFactory();
-  //    final String proxyHost = "proxy.osk.sony.co.jp"; // プロキシホスト
-  //    final int proxyPort = 10080; // プロキシポート番号
-  //    factory.setProxy(new Proxy(Type.SOCKS, new InetSocketAddress(proxyHost, proxyPort)));
-  //    return new RestTemplate(factory);
-  //  }
-
-  //  @Bean
-  //  public CloseableHttpClient httpclient() {
-  //
-  //    HttpHost proxy = new HttpHost("proxy.osk.sony.co.jp", 10080);
-  //    // CredentialsProvider credsProvider = new BasicCredentialsProvider();
-  //
-  //    RequestConfig config = RequestConfig.custom().setProxy(proxy).build();
-  //    CloseableHttpClient httpclient =
-  // HttpClients.custom().setDefaultRequestConfig(config).build();
-  //    return httpclient;
-  //  }
+  @Bean
+  public CloseableHttpClient httpClient() {
+    HttpClientBuilder httpClientBuilder = HttpClients.custom();
+    String host = System.getenv("proxyHost");
+    String port = System.getenv("proxyPort");
+    if (StringUtils.isNotEmpty(host) && StringUtils.isNotEmpty(port)) {
+      HttpHost proxy = new HttpHost(host, Integer.parseInt(port));
+      httpClientBuilder.setProxy(proxy);
+    }
+    return httpClientBuilder.build();
+  }
 }

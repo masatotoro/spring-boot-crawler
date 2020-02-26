@@ -4,7 +4,7 @@ import org.springframework.jms.core.JmsOperations;
 import org.springframework.stereotype.Repository;
 
 import jp.gihyo.wbpress.advance.lib.activemq.config.ActiveMQConfig;
-import jp.gihyo.wbpress.advance.lib.activemq.domain.CrawlRequest;
+import jp.gihyo.wbpress.advance.lib.activemq.domain.HatenaRequest;
 import lombok.RequiredArgsConstructor;
 
 @Repository
@@ -13,7 +13,9 @@ public class SendRepository {
 
   private final JmsOperations jmsOperations;
 
-  public void sendRequest(CrawlRequest crawlRequest) {
-    jmsOperations.convertAndSend(ActiveMQConfig.REQUEST_QUEUE, crawlRequest);
+  public void sendRequest(HatenaRequest hatenaRequest) {
+    jmsOperations.convertAndSend(
+        ActiveMQConfig.QUEUE_HATENA, //
+        hatenaRequest);
   }
 }

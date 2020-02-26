@@ -1,23 +1,17 @@
 package jp.gihyo.wbpress.advance.lib.activemq.domain;
 
-import java.net.URI;
+// @Builder
+// @NoArgsConstructor(access = AccessLevel.PRIVATE)
+// @AllArgsConstructor(access = AccessLevel.PRIVATE)
+// @Getter
+public interface CrawlRequest {
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+  //  @JsonProperty("uri")
+  //  URI uri;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-
-@Builder
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
-@AllArgsConstructor(access = AccessLevel.PRIVATE)
-@Getter
-// @Setter
-// @ToString
-public class CrawlRequest {
-
-  @JsonProperty("uri")
-  URI uri;
+  // ServiceType serviceType;
+  enum ServiceType {
+    QIITA, //
+    HATENA;
+  }
 }

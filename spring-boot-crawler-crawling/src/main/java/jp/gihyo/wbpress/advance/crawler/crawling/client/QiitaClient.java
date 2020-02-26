@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import jp.gihyo.wbpress.qiita.mongo.domain.QiitaItem;
+import jp.gihyo.wbpress.advance.crawler.crawling.domain.QiitaItem;
 
 @FeignClient(
     name = "QiitaClient", //

@@ -1,16 +1,13 @@
 package jp.gihyo.wdpress.advance.scheduling.service;
 
-import java.net.URI;
-
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import jp.gihyo.wbpress.advance.lib.activemq.domain.CrawlRequest;
+import jp.gihyo.wbpress.advance.lib.activemq.domain.HatenaRequest;
 import jp.gihyo.wdpress.advance.scheduling.repository.SendRepository;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
+// @Slf4j
 @Service
 @RequiredArgsConstructor
 public class ScheduleService {
@@ -23,12 +20,7 @@ public class ScheduleService {
   @Scheduled(fixedRate = INTERVAL)
   public void scheduling() {
 
-    CrawlRequest crawlRequest =
-        CrawlRequest //
-            .builder()
-            .uri(URI.create("https://qiita.com/api/v2/items"))
-            .build();
-    log.info("crawlRequest=[{}]", crawlRequest);
-    sendRepository.sendRequest(crawlRequest);
+    HatenaRequest hatenaRequest = HatenaRequest.builder().build();
+    sendRepository.sendRequest(hatenaRequest);
   }
 }

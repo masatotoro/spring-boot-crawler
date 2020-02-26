@@ -15,7 +15,9 @@ import javax.jms.ConnectionFactory;
 @EnableJms
 public class ActiveMQConfig {
 
-  public static final String REQUEST_QUEUE = "crawl-request-queue";
+  public static final String QUEUE_HATENA = "request-hatena-queue";
+  
+  public static final String QUEUE_QIITA = "request-qiita-queue";
 
   @Bean
   public JmsOperations jmsOperations( //

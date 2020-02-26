@@ -6,30 +6,31 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 import lombok.ToString;
 
 @Document(collection = "item")
+@Builder
 @Getter
-@Setter
+// @Setter
 @ToString
 @NoArgsConstructor
+@AllArgsConstructor
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class QiitaItem {
+public class Article {
 
-	@Id
-	String id;
+  @Id String id;
 
-	String title;
+  String title;
 
-	String url;
+  String url;
 
-	@JsonProperty("created_at")
-	String createTime;
+  @JsonProperty("created_at")
+  String createTime;
 
-	@JsonProperty("updated_at")
-	String updateTime;
-
+  @JsonProperty("updated_at")
+  String updateTime;
 }
