@@ -8,32 +8,17 @@
 		<artifactId>spring-boot-crawler</artifactId>
 		<version>0.0.11-SNAPSHOT</version>
 	</parent>
-	<packaging>jar</packaging>
-	<groupId>jp.gihyo.wdpress.advance.scheduling</groupId>
-	<artifactId>spring-boot-crawler-scheduling</artifactId>
-	<name>spring-boot-crawler-scheduling</name>
+	<groupId>jp.gihyo.wdpress.advance.admin</groupId>
+	<artifactId>spring-boot-admin</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-boot-admin</name>
 	<description>Demo project for Spring Boot</description>
 
 	<dependencies>
 		<dependency>
 			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<artifactId>spring-boot-admin-starter-server</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jp.gihyo.wbpress.advance.lib.activemq</groupId>
-			<artifactId>spring-boot-lib-activemq</artifactId>
-		</dependency>
-
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-test</artifactId> -->
-		<!-- <scope>test</scope> -->
-		<!-- </dependency> -->
 	</dependencies>
 
 	<build>

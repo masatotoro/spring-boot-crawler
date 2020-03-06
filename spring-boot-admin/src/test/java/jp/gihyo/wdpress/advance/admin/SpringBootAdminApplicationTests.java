@@ -1,12 +1,10 @@
-package jp.gihyo.wbpress.advance.crawler.crawling;
+package jp.gihyo.wdpress.advance.admin;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@Disabled
 @SpringBootTest
-class SpringBootCrawlerCrawlingApplicationTests {
+class SpringBootAdminApplicationTests {
 
 	@Test
 	void contextLoads() {
