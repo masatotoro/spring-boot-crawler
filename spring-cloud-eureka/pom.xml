@@ -9,35 +9,24 @@
 		<version>0.0.12-SNAPSHOT</version>
 	</parent>
 	<packaging>jar</packaging>
-	<groupId>jp.gihyo.wdpress.advance.admin</groupId>
-	<artifactId>spring-boot-admin</artifactId>
-	<name>spring-boot-admin</name>
+	<groupId>jp.gihyo.wdbpress.advane.eureka</groupId>
+	<artifactId>spring-cloud-eureka</artifactId>
+	<name>spring-cloud-eureka</name>
 	<description>Demo project for Spring Boot</description>
 
 	<dependencies>
 		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-server</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
 		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
-				<configuration>
-					<to>
-						<image>admin</image>
-					</to>
-					<container>
-						<useCurrentTimestamp>true</useCurrentTimestamp>
-					</container>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>
