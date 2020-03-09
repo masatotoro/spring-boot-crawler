@@ -8,44 +8,33 @@
 		<artifactId>spring-boot-crawler</artifactId>
 		<version>0.0.12-SNAPSHOT</version>
 	</parent>
-	<packaging>jar</packaging>
-	<groupId>jp.gihyo.wdpress.advance.scheduling</groupId>
-	<artifactId>spring-boot-crawler-scheduling</artifactId>
-	<name>spring-boot-crawler-scheduling</name>
+
+	<groupId>jp.gihyo.wdpress.advance.gateway</groupId>
+	<artifactId>spring-cloud-gateway</artifactId>
+	<name>spring-cloud-gateway</name>
 	<description>Demo project for Spring Boot</description>
 
 	<dependencies>
 		<dependency>
-			<groupId>de.codecentric</groupId>
-			<artifactId>spring-boot-admin-starter-client</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>jp.gihyo.wbpress.advance.lib.activemq</groupId>
-			<artifactId>spring-boot-lib-activemq</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
 		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-			<plugin>
-				<groupId>com.google.cloud.tools</groupId>
-				<artifactId>jib-maven-plugin</artifactId>
-				<configuration>
-					<to>
-						<image>scheduling</image>
-					</to>
-					<container>
-						<useCurrentTimestamp>true</useCurrentTimestamp>
-					</container>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

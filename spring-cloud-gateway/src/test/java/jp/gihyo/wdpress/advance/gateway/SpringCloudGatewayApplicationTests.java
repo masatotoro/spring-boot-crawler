@@ -1,15 +1,13 @@
-package jp.gihyo.wdpress.advance.api;
+package jp.gihyo.wdpress.advance.gateway;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-// @RunWith(SpringRunner.class)
-// @SpringBootTest
 @Disabled
 @SpringBootTest
-public class SpringBootCrawlerApiApplicationTests {
+class SpringCloudGatewayApplicationTests {
 
   @Test
-  public void contextLoads() {}
+  void contextLoads() {}
 }

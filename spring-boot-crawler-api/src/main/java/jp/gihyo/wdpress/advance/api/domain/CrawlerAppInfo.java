@@ -1,4 +1,4 @@
-package jp.gihyo.wdpress.advance.api.config;
+package jp.gihyo.wdpress.advance.api.domain;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @ConfigurationProperties(prefix = "crawler.app.info")
-public class CrawlerAppVersion {
+public class CrawlerAppInfo {
 
   private String appName;
 
