@@ -22,6 +22,8 @@ import lombok.ToString;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Article {
 
+  public static final Article NONE = new Article();
+
   @Id String id;
 
   String title;

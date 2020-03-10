@@ -11,7 +11,7 @@
 	<groupId>jp.gihyo.wbpress.advance.lib.activemq</groupId>
 	<artifactId>spring-boot-lib-activemq</artifactId>
 	<name>spring-boot-lib-active-mq</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Library for ActiveMQ</description>
 
 	<dependencies>
 		<dependency>

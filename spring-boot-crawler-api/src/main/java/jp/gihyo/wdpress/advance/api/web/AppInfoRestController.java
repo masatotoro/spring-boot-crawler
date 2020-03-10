@@ -1,4 +1,4 @@
-package jp.gihyo.wdpress.advance.api.web.rest;
+package jp.gihyo.wdpress.advance.api.web;
 
 import java.util.List;
 

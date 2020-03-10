@@ -11,7 +11,7 @@
 	<groupId>jp.gihyo.wbpress.advance.lib.mongo</groupId>
 	<artifactId>spring-boot-lib-mongo</artifactId>
 	<name>spring-boot-lib-mongo-db</name>
-	<description>Qiita Mongo</description>
+	<description>Library for MongoDB</description>
 
 	<dependencies>
 		<dependency>
