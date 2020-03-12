@@ -8,11 +8,10 @@
 		<artifactId>spring-boot-crawler</artifactId>
 		<version>0.0.14-SNAPSHOT</version>
 	</parent>
-
-	<groupId>jp.gihyo.wdpress.advance.gateway</groupId>
-	<artifactId>spring-cloud-gateway</artifactId>
-	<name>spring-cloud-gateway</name>
-	<description>gateway</description>
+	<groupId>jp.gihyo.wdpress.advance.config</groupId>
+	<artifactId>spring-cloud-config</artifactId>
+	<name>spring-cloud-config</name>
+	<description>Demo project for Spring Boot</description>
 
 	<dependencies>
 		<dependency>
@@ -21,26 +20,13 @@
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-gateway</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-loadbalancer</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-circuitbreaker-resilience4j</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>jp.gihyo.wdpress.advance.api</groupId>
-			<artifactId>spring-boot-crawler-api</artifactId>
-		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.cloud</groupId> -->
+		<!-- <artifactId>spring-cloud-starter-config</artifactId> -->
+		<!-- </dependency> -->
 	</dependencies>
-
 
 	<build>
 		<plugins>
